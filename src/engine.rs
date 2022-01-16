@@ -28,7 +28,7 @@ impl TransactionEngine {
                 if let Some(amount) = transaction.amount {
                     account.deposit(transaction.transaction_id, amount)
                 }
-                // TODO: log bad transaction type if there is not amount for deposit/withdrawal
+                // TODO: log bad transaction type if there is no amount for deposit/withdrawal
             }
             TransactionType::Withdrawal => {
                 if let Some(amount) = transaction.amount {
